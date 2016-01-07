@@ -150,11 +150,15 @@
 \newcommand\@fullname{\ClassError{ITU Handin}{Full name not given}{You have to supply your full name.}}
 \newcommand\fullname[1]{\renewcommand\@fullname{#1}}
 
+% When (in the format (MM/YYYY))
+\newcommand\@when{\ClassError{ITU Handin}{When not given}{You have to supply when the exam is (month year).}}
+\newcommand\when[1]{\renewcommand\@when{#1}}
+
 % Make title page
 \newcommand\maketitlepage{%
 	\NoBgThispage
 	\title{%
-		\Huge \textbf{\@coursename} \\ \huge Exam assignment January 2016
+		\Huge \textbf{\@coursename} \\ \huge Exam assignment \@when
 	}
 	\author{%
 		\textsc{\@fullname} \\ \textsc{\email}
