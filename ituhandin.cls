@@ -101,10 +101,10 @@
             \parbox[b]{.4\textwidth}{%
                 Side \thepage\ af \pageref{LastPage}}\hfill
             \parbox[b]{.6\textwidth}{%
-                \raggedleft \coursecode}
+                \raggedleft \@coursecode}
             \rule{\textwidth}{1.5pt}\\
             \parbox[b]{.7\textwidth}{%
-                \name }\hfill
+                \@fullname }\hfill
             \parbox[b]{.3\textwidth}{%
                 \raggedleft \email } 
         \end{minipage}\hspace{.02\textwidth}%
@@ -136,4 +136,39 @@
 
 \vspace*{\fill}
 \newpage
+}
+
+% Course Code
+\newcommand\@coursecode{\ClassError{ITU Handin}{Course code not given}{You have to supply the course code.}}
+\newcommand\coursecode[1]{\renewcommand\@coursecode{#1}}
+
+% Course Name
+\newcommand\@coursename{\ClassError{ITU Handin}{Course name not given}{You have to supply the course name.}}
+\newcommand\coursename[1]{\renewcommand\@coursename{#1}}
+
+% Name
+\newcommand\@fullname{\ClassError{ITU Handin}{Full name not given}{You have to supply your full name.}}
+\newcommand\fullname[1]{\renewcommand\@fullname{#1}}
+
+% When (in the format (MM/YYYY))
+\newcommand\@when{\ClassError{ITU Handin}{When not given}{You have to supply when the exam is (month year).}}
+\newcommand\when[1]{\renewcommand\@when{#1}}
+
+% Initials
+\newcommand\@initials{\ClassError{ITU Handin}{Initials not given}{You have to supply your initials.}}
+\newcommand\initials[1]{\renewcommand\@initials{#1}}
+
+% Returns: [initials]@itu.dk
+\newcommand\email{\@initials{@}itu.dk}
+
+% Make title page
+\newcommand\maketitlepage{%
+	\NoBgThispage
+	\title{%
+		\Huge \textbf{\@coursename} \\ \huge Exam Assignment \@when
+	}
+	\author{%
+		\textsc{\@fullname} \\ \textsc{\email}
+	}
+	\maketitle
 }
