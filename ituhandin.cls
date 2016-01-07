@@ -104,7 +104,7 @@
                 \raggedleft \@coursecode}
             \rule{\textwidth}{1.5pt}\\
             \parbox[b]{.7\textwidth}{%
-                \name }\hfill
+                \@fullname }\hfill
             \parbox[b]{.3\textwidth}{%
                 \raggedleft \email } 
         \end{minipage}\hspace{.02\textwidth}%
@@ -146,6 +146,10 @@
 \newcommand\@coursename{\ClassError{ITU Handin}{Course name not given}{You have to supply the course name.}}
 \newcommand\coursename[1]{\renewcommand\@coursename{#1}}
 
+% Name
+\newcommand\@fullname{\ClassError{ITU Handin}{Full name not given}{You have to supply your full name.}}
+\newcommand\fullname[1]{\renewcommand\@fullname{#1}}
+
 % Make title page
 \newcommand\maketitlepage{%
 	\NoBgThispage
@@ -153,7 +157,7 @@
 		\Huge \textbf{\@coursename} \\ \huge Exam assignment January 2016
 	}
 	\author{%
-		\textsc{\name} \\ \textsc{\email}
+		\textsc{\@fullname} \\ \textsc{\email}
 	}
 	\maketitle
 }
