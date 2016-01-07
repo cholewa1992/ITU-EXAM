@@ -165,7 +165,7 @@
 \newcommand\maketitlepage{%
 	\NoBgThispage
 	\title{%
-		\Huge \textbf{\@coursename} \\ \huge Exam assignment \@when
+		\Huge \textbf{\@coursename} \\ \huge Exam Assignment \@when
 	}
 	\author{%
 		\textsc{\@fullname} \\ \textsc{\email}
