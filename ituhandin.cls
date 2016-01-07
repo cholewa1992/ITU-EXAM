@@ -154,6 +154,13 @@
 \newcommand\@when{\ClassError{ITU Handin}{When not given}{You have to supply when the exam is (month year).}}
 \newcommand\when[1]{\renewcommand\@when{#1}}
 
+% Initials
+\newcommand\@initials{\ClassError{ITU Handin}{Initials not given}{You have to supply your initials.}}
+\newcommand\initials[1]{\renewcommand\@initials{#1}}
+
+% Returns: [initials]@itu.dk
+\newcommand\email{\@initials{@}itu.dk}
+
 % Make title page
 \newcommand\maketitlepage{%
 	\NoBgThispage
