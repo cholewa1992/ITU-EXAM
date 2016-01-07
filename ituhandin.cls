@@ -101,7 +101,7 @@
             \parbox[b]{.4\textwidth}{%
                 Side \thepage\ af \pageref{LastPage}}\hfill
             \parbox[b]{.6\textwidth}{%
-                \raggedleft \coursecode}
+                \raggedleft \@coursecode}
             \rule{\textwidth}{1.5pt}\\
             \parbox[b]{.7\textwidth}{%
                 \name }\hfill
@@ -137,3 +137,7 @@
 \vspace*{\fill}
 \newpage
 }
+
+% Course Code
+\newcommand\@coursecode{\ClassError{ITU Handin}{Course code not given}{You have to supply the course code.}}
+\newcommand\coursecode[1]{\renewcommand\@coursecode{#1}}
