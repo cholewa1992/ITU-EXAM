@@ -142,11 +142,15 @@
 \newcommand\@coursecode{\ClassError{ITU Handin}{Course code not given}{You have to supply the course code.}}
 \newcommand\coursecode[1]{\renewcommand\@coursecode{#1}}
 
+% Course Name
+\newcommand\@coursename{\ClassError{ITU Handin}{Course name not given}{You have to supply the course name.}}
+\newcommand\coursename[1]{\renewcommand\@coursename{#1}}
+
 % Make title page
 \newcommand\maketitlepage{%
 	\NoBgThispage
 	\title{%
-		\Huge \textbf{\titlename} \\ \huge Exam assignment January 2016
+		\Huge \textbf{\@coursename} \\ \huge Exam assignment January 2016
 	}
 	\author{%
 		\textsc{\name} \\ \textsc{\email}
