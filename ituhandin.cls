@@ -27,6 +27,7 @@
 \RequirePackage{todonotes}
 \RequirePackage{listings}
 \RequirePackage{caption}
+\RequirePackage[numbers]{natbib}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -172,3 +173,10 @@
 	}
 	\maketitle
 }
+
+\renewcommand{\thechapter}{Question \arabic{chapter}}
+\renewcommand\thesection{Part \arabic{section}}
+
+
+\newcommand{\fancyQuote}[2]{\begin{quote}``#1'' #2\end{quote}}
+\newcommand{\moreFancyQuote}[2]{\vspace{10pt}\begin{quote}``#1'' \vspace{-5pt} \flushright{--- #2} \end{quote}\vspace{10pt}}
