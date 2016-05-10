@@ -1,0 +1,15 @@
+before_install:
+- sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended pdfjam
+script:
+- make
+deploy:
+  provider: releases
+  api_key:
+    secure: InzoStjvlguVFAzK9iMeuwOBIvLTg+pIhUoSVSPBMsZIWvkKNYDKyc8TtoACYLU6JRFFU2qaooHJGCMPUtnSt+U+NpQnw4jj1Uh8BMmeX3dv7q6SWv1K8wpbpTA3dj7z0S/DjJyT8OcifO7RN9rYIOmxdryqtQeWOd5M4B/C2mMKP4kgKzmdP5Da2hvTP+R0FEGBGkwu9dET0kgoqNTmXaUVunaNlTlWqxtaSGAWYJcJ7hqwh7dW5SZnfX4LH6MARkyfQyYzh3iemeK7mV4jUKbhspwcrmu8SZuCD/W01Vqvm6/IcFzX/7VB7h7yoUIW94mnqAamZwsFUTxe1/+df2+V/8wM3NiWp6wVCMD2TgU8caFkJEZsDJzWD/xoyVsM8GyIANsroEMG/XHn8dFIsBs7e7LMadmHsrAyhP3c+rOxdtNB8+i2C+AOExhmByN3WiUWd9GxhXC2Pu3C7aTGWlJml889Vkck5ZDEJVOdFy6T1SKh2OqVcCdTX6pAKA2rkx2ZbL1Je0cEFyzAcbkyXwFcV122wmWcYIaQqPmTWjrjHutiuYf6lWY8jBQi+QMxeYFJtnM09NWGmzuNaQTlRkTE1bAMXIvFHoPSXNtKQ015vp1vWK2p//hwsX3ElovSrh4Sy1M8OlYtpPTDth3J5qL9Hk1P+ixojsMgIJIeURg=
+  file:
+  - exam-with-frontpage.pdf
+  - exam.pdf
+  skip_cleanup: true
+  on:
+    tags: true 

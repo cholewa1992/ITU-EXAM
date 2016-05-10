@@ -2,7 +2,6 @@
 
 *.pdf
 !frontpage.pdf
-!exam.pdf
 
 ### C ###
 # Object files
