@@ -8,6 +8,5 @@ exam.pdf: exam.tex
 	tlmgr update --self
 	tlmgr install xcolor
 	tlmgr install background
-	tlmgr install lmodern
 	pdflatex -halt-on-error exam.tex
 	pdflatex -halt-on-error exam.tex

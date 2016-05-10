@@ -1,5 +1,5 @@
 before_install:
-- "sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-latex-base pdfjam"
+- "sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-latex-base lmodern pdfjam"
 script:
 - sudo make
 deploy:
