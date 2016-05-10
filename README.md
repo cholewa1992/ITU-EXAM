@@ -1,4 +1,4 @@
-ITU-EXAM-TEMPLATE
+ITU-EXAM-TEMPLATE [![Build Status](https://travis-ci.org/cholewa1992/ITU-EXAM.svg?branch=master)](https://travis-ci.org/cholewa1992/ITU-EXAM)
 ==================
 
 This is an LaTeX template for ITU exams at the IT University of Copenhagen where you need to include code. Everyone is allowed to use and change this template in any way they want. Feel free to fork and commit improvements.
